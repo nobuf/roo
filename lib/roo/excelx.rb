@@ -353,7 +353,7 @@ class Roo::Excelx < Roo::Base
     @cell[sheet][key] =
       case @cell_type[sheet][key]
       when :float
-        v.to_f
+        BigDecimal(v)
       when :string
         v
       when :date

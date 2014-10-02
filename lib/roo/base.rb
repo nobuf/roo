@@ -445,6 +445,7 @@ class Roo::Base
       elsif [:first_row,true].include?(options[:headers])
         @headers = []
         row(first_row).each_with_index {|x,i| @headers << [x,i + 1]}
+        @header_line = first_row + 1
       else
         set_headers(options)
       end
